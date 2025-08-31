@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Web Page Word Counter</title>
+        <link rel="stylesheet", href="/static/style.css">
+    </head>
+    <body>
+        <div class="main_body">
+        <div class="header_title"><h3>How many words are in this page?</h3></div>
+
+        <form action="/" method="post">
+        
+        <input name="insert_url" class="insert_url" placeholder="Insert your page URL"><br>
+        <input name="insert_word" class="insert_word" placeholder="Insert your word"><br>
+        <button name="submit" class="submit" type="submit" hidden></button>
+        <br>
+        </form>
+        {% if count %}
+        {% if word %}
+        {% if error %}
+        <div class="result_text"><strong>{{ word }} is said {{ count }} times!!</strong></div>
+        <div class="error"><strong>{{ error }}</strong></div>
+        {% endif %}
+        {% endif %}
+        {% endif %}
+        <br>
+        <div class="footer"><p>This word counter is designed by Brahim HADJ SAID</p></div></div>
+    </body>
+</html>
